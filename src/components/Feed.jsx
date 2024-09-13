@@ -4,12 +4,6 @@ import { fetchFromAPI } from "../utils/fetchFromAPI";
 import { Sidebar, Videos } from "./";
 import React from "react";
 const Feed = () => {
-  useEffect(() => {
-    window.otpless = (otplessUser) => {
-      console.log(JSON.stringify(otplessUser));
-      localStorage.setItem("token", JSON.stringify(otplessUser).token);
-    };
-  }, []);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [videos, setVideos] = useState([]);
   useEffect(() => {
