@@ -28,7 +28,15 @@
       type="text/javascript"
       src="https://otpless.com/v2/auth.js"
       data-appid="L6RMI8R7M0E949F0LUVV"
-    ></script>
+    >
+
+      function otpless(otplessUser) {
+        alert(JSON.stringify(otplessUser));
+      }
+      window.otpless = (otplessUser) => {
+        alert(JSON.stringify(otplessUser));
+      };
+    </script>
   </head>
   <body>
     <div id="root"></div>
