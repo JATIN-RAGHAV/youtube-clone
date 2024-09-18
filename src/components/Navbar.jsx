@@ -3,14 +3,9 @@ import { Link } from "react-router-dom";
 import { logo } from "../utils/constants";
 import SearchBar from "./SearchBar";
 import { useEffect } from "react";
+import Logout from "./Logout";
 
 const Navbar = () => {
-  useEffect(() => {
-    window.otpless = (otplessUser) => {
-      console.log(JSON.stringify(otplessUser));
-      localStorage.setItem("token", JSON.stringify(otplessUser).token);
-    };
-  }, []);
 
   return (
     <Stack
@@ -28,6 +23,8 @@ const Navbar = () => {
         <img src={logo} alt="Logo" height={45} />
       </Link>
       <SearchBar />
+      <span style={{color:'white'}} > {localStorage.getItem('name')} </span>
+      <Logout/>
     </Stack>
   );
 };
